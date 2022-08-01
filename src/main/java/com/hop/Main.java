@@ -17,5 +17,11 @@ public class Main {
                 .build();
 
         System.out.println(order);
+
+        var product = new Product(123L, "Apples", "Tasty apples");
+        var line = new OrderLine(product,5, BigDecimal.valueOf(5.50));
+        var line1 = line.withQuantity(10).withPrice(BigDecimal.valueOf(6));
+        System.out.println(line1);
+
     }
 }
